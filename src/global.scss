@@ -1,0 +1,141 @@
+$bgPrimary: #181f35;
+$bgModal: #242f4e;
+$textPrimary: white;
+$textSecondary: #8499ae;
+$primaryColor: #11a3b7;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.transition {
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-duration: 0.5s;
+}
+
+body {
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #242f4ec0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $bgPrimary;
+        border-radius: 3px;
+    }
+}
+
+#root {
+    background: $bgPrimary;
+    overflow: hidden;
+    font-family: 'Rubik', sans-serif;
+    color: $textPrimary;
+
+    
+}
+
+#layout-wrapper {
+    background: linear-gradient(180deg, #1a2238 0%, #070d1d 100%);
+}
+
+header {
+    background: $bgPrimary;
+}
+
+.custom-input {
+    background: #19222d;
+    border-radius: 13px;
+    border: unset;
+    outline: none;
+    color: $textSecondary;
+    height: 48px;
+    padding: 0 0.5rem 0 1.5rem;
+    width: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    &:read-only {
+        opacity: 0.7;
+    }
+
+    &.search-bar {
+        border-radius: 40px;
+    }
+}
+
+.btn-wrapper {
+    white-space: nowrap;
+    width: 100%;
+    height: 36px;
+    border: none;
+    background: linear-gradient(110.05deg, #3bdcb1 13.06%, #11a3b7 84.95%);
+    box-shadow: 0px 0px 0px 2px #29c1b1, -5px -5px 10px rgba(255, 255, 255, 0.1), 5px 10px 10px rgba(1, 7, 19, 0.2);
+    border-radius: 20px;
+    color: $textPrimary;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:disabled:hover {
+        cursor: default !important;
+    }
+
+    &.default-cursor {
+        cursor: default !important;
+    }
+}
+
+.custom-button {
+    width: 240px;
+    position: relative;
+    background: #181f35;
+    box-shadow: 0px 0px 0px 2px #1a2238, -5px -5px 10px rgba(255, 255, 255, 0.1), 5px 10px 10px rgba(1, 7, 19, 0.2);
+    border-radius: 20px;
+
+    .content {
+        background: linear-gradient(180deg, #22b9b5 0%, #37d6b2 100%);
+        box-shadow: 0px 0px 0px 2px #1a2238, -5px -5px 10px rgba(255, 255, 255, 0.1), 5px 10px 10px rgba(1, 7, 19, 0.2);
+        border-radius: 20px;
+    }
+
+    &:hover {
+        .content {
+            opacity: 0.7;
+        }
+    }
+}
+
+.custom-scrollbar {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $bgPrimary;
+        border-radius: 3px;
+    }
+}
+
+.nft-card {
+    box-shadow: 0px 0px 0px 2px #1a2238, -5px -5px 10px rgba(255, 255, 255, 0.1), 5px 10px 10px rgba(1, 7, 19, 0.2);
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+    }
+}

@@ -1,0 +1,2 @@
+export const SET_NFT_DATA = 'SET_SERVICE_DATA';
+export const SET_NFT_LOADING = 'SET_SERVICE_LOADING';
